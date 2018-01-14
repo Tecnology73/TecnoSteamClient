@@ -69,8 +69,14 @@ Here are some examples:
 ## Setup
 1. Run `npm install` OR `yarn`
 
+If you are working locally;
+
+2. Make sure you have followed the steps from [here](https://github.com/73cn0109y/TecnoSteam) to set your Laravel Passport Token
+
+3. Edit line 53 inside `src/Steam/index.js` and replace `[INSERT USERNAME HERE]` with your Steam Username or leave it blank.
+
 ## Run
-2. Run one of the following;
+1. Run one of the following;
 
     **DEVELOPMENT** - `npm run dev-server` OR `yarn dev-server`
 
@@ -78,7 +84,7 @@ Here are some examples:
 
     *NOTE: Production has issues reading project files! It may be best to just run as development until this issue is solved.*
 
-3. Run `npm start` or `yarn start`
+2. Run `npm start` or `yarn start`
 
 ## Road Block
 Straight to the point - I rage quit this project because of an annoying issues I was having.
