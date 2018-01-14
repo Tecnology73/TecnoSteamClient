@@ -1,0 +1,96 @@
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0 -0.5em;
+
+	&:not(:last-child) {
+		margin-bottom: 1em;
+	}
+
+	[class*="col-"],
+	.col {
+		padding: 0 0.5em;
+	}
+
+	.col-auto {
+		flex: 0 0 auto;
+	}
+
+	.col {
+		flex-grow: 1;
+		flex-basis: 0;
+	}
+
+	@for $i from 1 through 12 {
+		.col-#{$i} {
+			flex: 0 0 #{(($i / 12) * 100) + '%'};
+			max-width: #{(($i / 12) * 100) + '%'};
+		}
+
+		.col-offset-#{$i} {
+			margin-left: #{(($i / 12) * 100) + '%'};
+		}
+	}
+}
+
+.form-control-group {
+	display: flex;
+	margin-bottom: 1em;
+
+	&.mismatch {
+		background-color: transparentize(red, 0.75);
+
+		.form-control-icon,
+		.form-control {
+			border-color: transparentize(red, 0.25);
+		}
+	}
+
+	.form-control-icon,
+	.form-control {
+		transition: border-color ease-in-out 0.25s, background-color ease-in-out 0.25s;
+		border: solid 1px transparent;
+	}
+
+	.form-control-icon {
+		flex: 0 0 45px;
+		text-align: center;
+		padding: 0.75em 1em;
+		border-right-color: rgba(0, 0, 0, 0.1);
+	}
+
+	.form-control {
+		flex: 1 1 100%;
+		margin-bottom: 0;
+		border-left: 0;
+	}
+}
+
+.form-control {
+	font: inherit;
+	padding: 0.75em 1em;
+	border: 0;
+	outline: none;
+	cursor: initial;
+	color: inherit;
+	margin-bottom: 1em;
+
+	&.form-control-block {
+		display: block;
+		width: 100%;
+	}
+}
+
+.btn {
+	background-color: #2196f3;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	transition: background-color ease-in-out 0.1s;
+
+	&:hover {
+		background-color: lighten(#2196f3, 5%);
+	}
+}

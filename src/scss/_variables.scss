@@ -1,0 +1,50 @@
+// Theme
+$theme-primary-color: #1C2432;
+$theme-secondary-color: #23292F;
+$theme-accent-color: #03A9F4;
+$theme-success-color: #4CAF50;
+$theme-danger-color: #F44336;
+$theme-warning-color: #FF9800;
+$theme-info-color: $theme-accent-color;
+$theme-info-alternate-color: #3F51B5;
+
+// Base
+$color: #FDFDFC;
+$back-color: $theme-primary-color;
+
+// Persona State
+$persona-online: #2196F3;
+$persona-offline: #9E9E9E;
+$persona-snooze: #FF9800;
+$persona-away: #3F51B5;
+$persona-busy: #F44336;
+$persona-in-game: #4CAF50;
+
+// --- Components ---
+// NavBar
+$ts-nav-bar-height: 50px;
+$ts-nav-bar-back-color: darken($theme-primary-color, 5%);
+
+// Library NavBar
+$ts-library-nav-bar-height: 50px;
+
+// Library Sidebar
+$ts-library-sidebar-width: 300px;
+
+$theme-colors: (
+		accent: $theme-accent-color,
+		success: $theme-success-color,
+		danger: $theme-danger-color,
+		warning: $theme-warning-color,
+		info: $theme-info-color,
+		info-alternate: $theme-info-alternate-color
+);
+
+$persona-states: (
+		online: $persona-online,
+		offline: $persona-offline,
+		snooze: $persona-snooze,
+		away: $persona-away,
+		busy: $persona-busy,
+		in-game: $persona-in-game,
+);
