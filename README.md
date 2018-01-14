@@ -6,6 +6,15 @@
 
 The client is basically entirely relient on the server I created. You can view the code for this at the repository [here](https://github.com/73cn0109y/TecnoSteam).
 
+## Table of Contents
+* [Disclosure](#disclosure)
+* [Description](#description)
+* [Features](#features)
+    * [Advanced Search](#advanced-search)
+* [Setup](#setup)
+* [Run](#run)
+* [Road Block](#road-block)
+
 ## Disclosure
 There is some personal information stored on the server that is pulled from the Steam API. You can check out what exactly will be stored by checking out the database migrations on the server repository [here](https://github.com/73cn0109y/TecnoSteam/tree/master/database/migrations).
 
@@ -45,9 +54,10 @@ As of writing this I have implemented the following (although probbaly not in th
     - Ability to chat
 - Ability to install/launch games. (Launching games still requries Steam to be running.)
 
-### Advanced Search
+#### Advanced Search
 The friends window has a search feature that supports more refined searching.
 Here are some examples:
+
 `frank` - Show only friends whos name contains frank (Matches "frank", "abcfrank", "abcfrankabc", etc.)
 
 `state:offline` - Show only friends who are offline.
