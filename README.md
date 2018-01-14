@@ -14,6 +14,7 @@ The client is basically entirely relient on the server I created. You can view t
 * [Setup](#setup)
 * [Run](#run)
 * [Road Block](#road-block)
+* [Screenshots](#screenshots)
 
 ## Disclosure
 There is some personal information stored on the server that is pulled from the Steam API. You can check out what exactly will be stored by checking out the database migrations on the server repository [here](https://github.com/73cn0109y/TecnoSteam/tree/master/database/migrations).
@@ -96,3 +97,7 @@ Whilst trying to implement a progress bar for downloading/installing/updating ga
 There are tricks to get around this like doing `app_list` (I've forgotten the exact command) but this doesn't work for what I'm trying to accomplish here.
 
 If someone can figure this out then this will be a HUGE step forward for this project. IIRC, you'll have to do some low-level Win32 API shit and basically hack away at steamcmd or try to interface with the dll directly (I've tried but with my limited C++ knowledge, didn't end well for my keyboard).
+
+## Screenshots
+![TecnoSteam Client Preview](https://user-images.githubusercontent.com/10562383/34917032-1175fe3e-f995-11e7-828d-743257eed0ea.png)
+
