@@ -1,0 +1,159 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+// Variables
+@import 'variables';
+// Framework
+@import 'framework';
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.9rem;
+	font-weight: 300;
+	letter-spacing: 0.025rem;
+	box-sizing: border-box;
+	cursor: default;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	color: $color;
+	background-color: $back-color;
+}
+
+*,
+::after,
+::before {
+	box-sizing: inherit;
+	cursor: inherit;
+	user-select: none;
+}
+
+::-webkit-input-placeholder {
+	color: transparentize(white, 0.5);
+}
+
+::-webkit-scrollbar {
+	width: 2px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.theme-highlight {
+	color: $theme-primary-color;
+}
+
+@each $name, $color in $theme-colors {
+	.theme-#{$name} {
+		color: $color;
+	}
+
+	.theme-#{$name}-bg {
+		background-color: $color;
+	}
+}
+
+@each $state, $color in $persona-states {
+	.persona-state-#{$state} {
+		color: $color;
+	}
+
+	.persona-state-#{$state}-bg {
+		background-color: $color;
+	}
+}
+
+.persona-state {
+	position: relative;
+
+	&.offline::after {
+		border-color: $persona-offline;
+	}
+
+	&.snooze::after {
+		border-color: $persona-snooze;
+	}
+
+	&.away::after {
+		border-color: $persona-away;
+	}
+
+	&.busy::after {
+		border-color: $persona-busy;
+	}
+
+	&.in-game::after {
+		border-color: $persona-in-game;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		border: solid 2px $persona-online;
+	}
+}
+
+.section-title {
+	text-transform: uppercase;
+	color: $theme-accent-color;
+	font-weight: 600;
+	margin-top: 1em;
+}
+
+.accent-highlight {
+	color: $theme-accent-color;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	outline: none;
+}
+
+.game-news-group > .game-news-item > .news-content * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Vue Transitions
+.libraryFade-enter-active,
+.libraryFade-leave-active {
+	transition: opacity ease-in-out 0.5s;
+}
+
+.libraryFade-enter,
+.libraryFade-leave-to {
+	opacity: 0;
+}
+
+.growShrink-enter-active,
+.growShrink-leave-active {
+	pointer-events: none;
+	transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+}
+
+.growShrink-enter-active,
+.growShrink-leave-to {
+	transform: scale(0);
+	opacity: 0;
+}
+
+.growShrink-enter-to {
+	transform: scale(1);
+	opacity: 1;
+	z-index: 1;
+}

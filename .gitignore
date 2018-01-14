@@ -1,0 +1,7 @@
+.idea/
+dist/
+steamcmd/
+node_modules/
+login_key
+settings
+error.log
